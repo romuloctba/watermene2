@@ -1,5 +1,5 @@
 import { redrawCanvas, resizeCanvas } from "./canvas";
-import { xSlider, ySlider } from "./controls";
+import { howForm, resetContainer, toggleItemHidden, uploadBackgroundForm, xSlider, ySlider } from "./controls";
 
 let backgroundImage: HTMLImageElement | null = null;
 
@@ -16,6 +16,12 @@ export function drawBackground(ctx: CanvasRenderingContext2D) {
     if (backgroundImage) {
         ctx.drawImage(backgroundImage, 0, 0);
     }
+}
+
+function onBackgroundUploaded() {
+  toggleItemHidden(uploadBackgroundForm);
+  toggleItemHidden(resetContainer);
+  toggleItemHidden(howForm);
 }
 
 export function changeBackground(e: Event) {
@@ -37,4 +43,5 @@ export function changeBackground(e: Event) {
     };
   
     reader.readAsDataURL(file);
+    onBackgroundUploaded();
   }

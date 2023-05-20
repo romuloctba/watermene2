@@ -1,6 +1,6 @@
 import { redrawCanvas } from "./canvas";
 import { DEFAULT_IMAGE_WIDTH } from "./constants";
-import { transparencySlider, xSlider, ySlider } from "./controls";
+import { form, howForm, makeHidden, makeVisible, transparencySlider, xSlider, ySlider } from "./controls";
 
 let image: HTMLImageElement | null = null;
 let imageSize = DEFAULT_IMAGE_WIDTH; // Default size
@@ -32,6 +32,10 @@ export function drawSeal(ctx: CanvasRenderingContext2D) {
 }
 // Add other image-related functions as needed
 
+function onSealLoaded() {
+  makeHidden(howForm);
+  makeVisible(form);
+}
 
 export function loadedSeal (e: Event) {
     const target = e.target as HTMLInputElement;
@@ -48,6 +52,7 @@ export function loadedSeal (e: Event) {
     };
   
     reader.readAsDataURL(file);
+    onSealLoaded();
   }
   
  export function changeSize(e: Event) {

@@ -16,17 +16,17 @@
           Mover
         </button>
       </div>
-      <div>
-        <label for="backgroundInput">Envie o Mene</label>
-        <input type="file" id="backgroundInput" accept="image/png, image/jpeg" />
-
+      <div id="reset-container" class="hidden">
         <button id="resetButton">Reset</button>
       </div>
+      <div id="upload-mene">
+        <label for="backgroundInput">Envie o Mene</label>
+        <input type="file" id="backgroundInput" accept="image/png, image/jpeg" />
+      </div>
 
-      <fieldset id="how-form">
+      <fieldset id="how-form" class="hidden">
         <legend>Escolha Watermene</legend>
         <div>
-          
             Como vai ser?
             <div>
               <label for="how">
@@ -62,7 +62,7 @@
         </div>
       </fieldset>
       
-      <form id="the-form">
+      <form id="the-form" class="hidden">
         <fieldset>
           <legend>Tamanho</legend>
             <label for="sizeSelect">Largura:</label>
