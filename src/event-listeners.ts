@@ -1,7 +1,7 @@
 import { changeBackground } from "./background";
-import { clearCanvas, redrawCanvas } from "./canvas";
-import { backgroundInput, closeMain, how, imageInput, resetButton, resetForm, sizeSelect, transparencySlider, xSlider, ySlider } from "./controls";
-import { changeSize, loadedSeal } from "./image";
+import { clearCanvas, downloadCanvas, redrawCanvas } from "./canvas";
+import { backgroundInput, canvas, closeMain, downloadButton, how, imageInput, resetButton, resetForm, sizeSelect, transparencySlider, xSlider, ySlider } from "./controls";
+import { changeSize, clearSeal, loadedSeal } from "./image";
 import { changedHow, toggleMain } from "./ui";
 
 backgroundInput.addEventListener('change', changeBackground);
@@ -12,8 +12,11 @@ sizeSelect.addEventListener('change', changeSize);
 transparencySlider.addEventListener('input', redrawCanvas);
 resetButton.addEventListener('click', () => {
     resetForm();
+    clearSeal();
     clearCanvas();
 });
 
 ySlider.addEventListener('input', redrawCanvas);
 xSlider.addEventListener('input', redrawCanvas);
+
+downloadButton.addEventListener('click', downloadCanvas, false);

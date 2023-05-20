@@ -60,3 +60,8 @@ export function loadedSeal (e: Event) {
     imageSize = parseInt(target.value, 10);
     redrawCanvas();
   }
+
+export function clearSeal() {
+  image = null;
+  imageSize = DEFAULT_IMAGE_WIDTH;
+}

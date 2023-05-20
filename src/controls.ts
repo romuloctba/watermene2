@@ -13,7 +13,7 @@ export const canvas = document.querySelector<HTMLCanvasElement>('#menearea')!;
 export const form = document.getElementById('the-form') as HTMLFormElement;
 export const uploadBackgroundForm = document.getElementById('upload-mene') as HTMLFormElement;
 export const resetContainer = document.getElementById('reset-container') as HTMLDivElement;
-
+export const downloadButton = document.getElementById('download') as HTMLButtonElement;
 function resetAllFields() {
   form.reset();
   backgroundInput.value ='';
