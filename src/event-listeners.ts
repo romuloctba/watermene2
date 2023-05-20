@@ -1,6 +1,6 @@
 import { changeBackground } from "./background";
 import { clearCanvas, downloadCanvas, redrawCanvas } from "./canvas";
-import { backgroundInput, canvas, closeMain, downloadButton, how, imageInput, resetButton, resetForm, sizeSelect, transparencySlider, xSlider, ySlider } from "./controls";
+import { backgroundInput, closeMain, downloadButton, how, imageInput, resetButton, resetForm, sizeSelect, transparencySlider, xSlider, ySlider } from "./controls";
 import { changeSize, clearSeal, loadedSeal } from "./image";
 import { changedHow, toggleMain } from "./ui";
 
