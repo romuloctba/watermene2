@@ -32,6 +32,16 @@ export function redrawCanvas() {
 }
 
 export function downloadCanvas(this: HTMLAnchorElement) {
-  var dataUrl = canvas.toDataURL('image/png');
-  this.href = dataUrl.replace(/^data:image\/[^;]/, 'data:application/octet-stream');
+
+  const dataURL = canvas.toDataURL('image/png');
+  
+    // Create a temporary link element
+    const link = document.createElement('a');
+    link.href = dataURL;
+    link.download = 'watermene.png';
+  
+    // Trigger the download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 };
