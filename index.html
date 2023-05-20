@@ -2,50 +2,92 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>Watermene2</title>
   </head>
   <body>
     <div id="app">
       <canvas id="menearea"></canvas>
     </div>
     <main id="main">
-      
+      <div id="main-container-controls">
+        <button id="closeMain">
+          Mover
+        </button>
+      </div>
       <div>
-        <label for="backgroundInput">Mene
-        </label>
-        <br>
+        <label for="backgroundInput">Envie o Mene</label>
         <input type="file" id="backgroundInput" accept="image/png, image/jpeg" />
+
+        <button id="resetButton">Reset</button>
       </div>
 
-      <div>
-        <label for="imageInput">Watermene
-        </label>
-        <br>
-          <input type="file" id="imageInput" accept="image/png" />
-      </div>
+      <fieldset id="how-form">
+        <legend>Escolha Watermene</legend>
+        <div>
+          
+            Como vai ser?
+            <div>
+              <label for="how">
+                <select name="how" id="how">
+                  <option disabled selected value></option>
+                  <optgroup label="Escolha">
+                    <option value="CHOOSE_SEAL">Escolher Selo</option>
+                    <option value="SELF_SEAL">Subir um arquivo png</option>
+                  </optgroup>
+                </select>
+              </label>
+
+            </div>
+        </div>
       
-      <form name="the-form">
+        <div id="SELF_SEAL" class="hidden">
+          <label for="imageInput">Enviar
+            <input type="file" id="imageInput" accept="image/png" />
+          </label>
+        </div>
+
+        <div id="CHOOSE_SEAL" class="hidden">
+          <label for="sealChooser">Escolha um Selo:</label>
+          <section class="carousel" aria-labelledby="carouselheading">
+            <ul>
+              <li class="slide">…</li>
+              <li class="slide">…</li>
+              <li class="slide">…</li>
+              …
+            </ul>
+          </section>
+
+        </div>
+      </fieldset>
+      
+      <form id="the-form">
         <fieldset>
           <legend>Tamanho</legend>
             <label for="sizeSelect">Largura:</label>
             <select id="sizeSelect">
               <option value="22">22px</option>
               <option value="44">44px</option>
-              <option value="88">88px</option>
+              <option selected value="88">88px</option>
               <option value="176">176px</option>
             </select>
         </fieldset>
         <fieldset>
           <legend>Posição</legend>
-          <div>
-            <label for="position-x">Horizontal</label>
-            <input id="position-x" type="range" min="0" max="800" />
+          <div class="position-controls">
+            <div>
+              <label for="position-x">Horizontal</label>
+              <input id="position-x" type="range" min="0" max="800" />
+            </div>
+            <div>
+              <label for="position-y">Vertical</label>
+              <input id="position-y" type="range" min="0" max="800" />
+            </div>
           </div>
           <div>
-            <label for="position-y">Vertical</label>
-            <input id="position-y" type="range" min="0" max="800" />
+            <label for="transparency">Transparência</label>
+            <input id="transparency" value="0.5" type="range" min="0" max="1" step="0.1" />
           </div>
         </fieldset>
       </form>
