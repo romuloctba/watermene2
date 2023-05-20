@@ -146,6 +146,10 @@ input[type="range"] {
 canvas {
   max-width: 100%;
 }
+#main-container-controls {
+  display: flex;
+  justify-content: space-between;
+}
 
 #closeMain {
   background: #3DD1E7;
@@ -165,6 +169,10 @@ canvas {
 #closeMain.closed {
   margin-top: -44px;
   background-image: url('/icons/chevron-up.svg');
+}
+
+#reset-container {
+  margin-top: -44px;
 }
 
 #download-container {
@@ -225,3 +233,12 @@ canvas {
     font-size: 1rem;
   }
 }
+
+input, select, label {
+  line-height: 2em;
+}
+.field-line {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+

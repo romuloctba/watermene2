@@ -12,12 +12,17 @@
     </div>
     <main id="main">
       <div id="main-container-controls">
-        <button id="closeMain">
-          Mover
+        <div>
+          <button id="closeMain">
+            Mover
+          </button>
+        </div>
+        <button id="installButton" style="display: none;">
+          Instalar este App
         </button>
-      </div>
-      <div id="reset-container" class="hidden">
-        <button id="resetButton">Reset</button>
+        <div id="reset-container" class="hidden">
+          <button id="resetButton">Reset</button>
+        </div>
       </div>
       <div id="upload-mene">
         <label for="backgroundInput">Envie o Mene</label>
@@ -28,7 +33,7 @@
         <legend>Escolha Watermene</legend>
         <div>
             Como vai ser?
-            <div>
+            <div class="field-line">
               <label for="how">
                 <select name="how" id="how">
                   <option disabled selected value></option>
@@ -38,17 +43,16 @@
                   </optgroup>
                 </select>
               </label>
-
             </div>
         </div>
       
-        <div id="SELF_SEAL" class="hidden">
+        <div id="SELF_SEAL" class="field-line hidden">
           <label for="imageInput">Enviar
             <input type="file" id="imageInput" accept="image/png" />
           </label>
         </div>
 
-        <div id="CHOOSE_SEAL" class="hidden">
+        <div id="CHOOSE_SEAL" class="field-line hidden">
           <label for="sealChooser">Escolha um Selo:</label>
           <section class="carousel" aria-labelledby="carouselheading">
             <ul>
