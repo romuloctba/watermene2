@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+    <script type="module" crossorigin src="/assets/index-085bc99e.js"></script>
+    <link rel="stylesheet" href="/assets/index-08c527cc.css">
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="menearea"></canvas>
+    </div>
+    <main id="main">
+      
+      <div>
+        <label for="backgroundInput">Mene
+        </label>
+        <br>
+        <input type="file" id="backgroundInput" accept="image/png, image/jpeg" />
+      </div>
+
+      <div>
+        <label for="imageInput">Watermene
+        </label>
+        <br>
+          <input type="file" id="imageInput" accept="image/png" />
+      </div>
+      
+      <form name="the-form">
+        <fieldset>
+          <legend>Tamanho</legend>
+            <label for="sizeSelect">Largura:</label>
+            <select id="sizeSelect">
+              <option value="22">22px</option>
+              <option value="44">44px</option>
+              <option value="88">88px</option>
+              <option value="176">176px</option>
+            </select>
+        </fieldset>
+        <fieldset>
+          <legend>Posição</legend>
+          <div>
+            <label for="position-x">Horizontal</label>
+            <input id="position-x" type="range" min="0" max="800" />
+          </div>
+          <div>
+            <label for="position-y">Vertical</label>
+            <input id="position-y" type="range" min="0" max="800" />
+          </div>
+        </fieldset>
+      </form>
+    </main>
+    
+  </body>
+</html>
