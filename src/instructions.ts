@@ -3,7 +3,13 @@ import { makeHidden, makeVisible } from "./ui";
 const instructionsContainer = document.getElementById('instructions-container') as HTMLDivElement;
 
 export function showInstructions() {
-    const instructionsParagraph = `<ol>
+    const instructionsParagraph = `
+    <div class="wordart superhero">
+        <div class="logo-ball"></div>
+        <h1 class="text">WaterMene</h1>
+    </div>
+    
+    <ol>
         <li>Envie o Mene no qual quer adicionar a selo.</li>
         <li>Escolha entre os selos disponíveis ou <span class="news-badge">*</span>envie o seu próprio selo.</li>
         <li>Posicione, escolha o tamanho, e altere a transparência.</li>
