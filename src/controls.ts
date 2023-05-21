@@ -13,6 +13,5 @@ export const form = document.getElementById('the-form') as HTMLFormElement;
 export const uploadBackgroundForm = document.getElementById('upload-mene') as HTMLFormElement;
 export const resetContainer = document.getElementById('reset-container') as HTMLDivElement;
 export const downloadButton = document.getElementById('download') as HTMLButtonElement;
-export const dontInstallButton = document.getElementById('dontInstallButton') as HTMLButtonElement;
 export const installButton = document.getElementById('installButton') as HTMLButtonElement;
 export const installButtonContainer = document.getElementById('installButtonContainer') as HTMLDivElement;

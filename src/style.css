@@ -111,7 +111,7 @@ input, select {
   padding: 24px;
   border-radius: 8px;
   border: 1px solid rgba(255,255,255,0.4);
-  background: rgba(255,255,255,0.2);
+  background: rgba(2,2,2,0.7);
   opacity: 1;
   transition: 100ms all ease-in-out;
   display: flex;
@@ -249,32 +249,19 @@ input, select, label {
 #installButtonContainer button img {}
 
 #installButton {
-  background: url('/icons/bookmark-plus.svg') 50% 50% no-repeat;
-  background-color: rgba(50, 100, 10, 0.8);
-}
-#dontInstallButton {
-  background: url('/icons/close.svg') 50% 50% no-repeat;
-  background-color: rgba(250, 100, 10, 0.8);
+  background: url('/icons/bookmark-plus.svg') 2% 50% no-repeat;
+  padding-left: 2em;
+  background-color: rgba(10, 50, 0, 0.8);
 }
 
 #installButtonContainer:hover {
   opacity: 1;
 }
 #installButtonContainer {
-  position: fixed;
-  top: -1.5em;
-  left: 50%;
-  z-index: 1;
-  color: #222;
-  background: rgba(255,255,255,1);
-  opacity: 0.4;
-  padding: 2em 1em 1em 1em;
-  border-radius: 16px;
-  transform: translateX(-50%);
-  transition: all 100ms ease-in-out;
+  margin-top: -44px;
 }
 #installButtonContainer button {
-  margin: 0 1.4em;
+  margin: 0em;
 }
 
 div#installButtonContainer span {

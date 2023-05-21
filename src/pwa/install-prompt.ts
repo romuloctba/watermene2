@@ -1,4 +1,4 @@
-import { dontInstallButton, installButton, installButtonContainer } from "../controls";
+import { installButton, installButtonContainer } from "../controls";
 import { makeHidden, makeVisible } from "../ui";
 type BeforeInstallPromptEvent = Event & Record<string, any>;
 
@@ -9,10 +9,6 @@ window.addEventListener('beforeinstallprompt', (event: BeforeInstallPromptEvent)
   deferredPrompt = event;
   makeVisible(installButtonContainer)
 });
-
-dontInstallButton.addEventListener('click', () => {
-  makeHidden(installButtonContainer);
-})
 
 installButton.addEventListener('click', () => {
   if (deferredPrompt) {
