@@ -22,24 +22,24 @@ export function toggleMain() {
 
 // Add other UI-related functions as needed
 export function toggleSealForm(value: SEAL_FORM_OPTIONS) {
-    const visible = document.querySelector('#how-form .visible')
-    visible?.classList.remove('visible');
-    visible?.classList.add('hidden');
-  
-    console.log('removed');
-  
-    document.getElementById(value)!.classList.add('visible');
-    document.getElementById(value)!.classList.remove('hidden');
-  }
-export function changedHow (e: Event) {
-    const target = e.target as HTMLSelectElement;
-    toggleSealForm(target.value as SEAL_FORM_OPTIONS);
+  const visible = document.querySelector('#how-form .visible')
+  visible?.classList.remove('visible');
+  visible?.classList.add('hidden');
+
+  console.log('removed');
+
+  document.getElementById(value)!.classList.add('visible');
+  document.getElementById(value)!.classList.remove('hidden');
+}
+export function changedHow(e: Event) {
+  const target = e.target as HTMLSelectElement;
+  toggleSealForm(target.value as SEAL_FORM_OPTIONS);
 }
 
 
 function resetAllFields() {
   form.reset();
-  backgroundInput.value ='';
+  backgroundInput.value = '';
   imageInput.value = '';
 }
 

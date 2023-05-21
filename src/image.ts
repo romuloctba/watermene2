@@ -15,7 +15,7 @@ export function getImage() {
 }
 
 export function drawSeal(ctx: CanvasRenderingContext2D) {
-    const image = getImage();
+  const image = getImage();
   if (image) {
     const x = parseInt(xSlider.value, 10);
     const y = parseInt(ySlider.value, 10);
@@ -25,7 +25,7 @@ export function drawSeal(ctx: CanvasRenderingContext2D) {
 
     const transparency = parseFloat(transparencySlider.value || '0.5');
     ctx.globalAlpha = transparency;
-    
+
     ctx.drawImage(image, x, y, width, height);
 
     ctx.globalAlpha = 1.0;
@@ -38,29 +38,29 @@ function onSealLoaded() {
   makeVisible(form);
 }
 
-export function loadedSeal (e: Event) {
-    const target = e.target as HTMLInputElement;
-    const file = target.files![0];
-    const reader = new FileReader();
-  
-    reader.onload = function (event: ProgressEvent<FileReader>) {
-      const img = new Image();
-      img.onload = function () {
-        setImage(img);
-        redrawCanvas();
-      };
-      img.src = event.target!.result as string;
+export function loadedSeal(e: Event) {
+  const target = e.target as HTMLInputElement;
+  const file = target.files![0];
+  const reader = new FileReader();
+
+  reader.onload = function (event: ProgressEvent<FileReader>) {
+    const img = new Image();
+    img.onload = function () {
+      setImage(img);
+      redrawCanvas();
     };
-  
-    reader.readAsDataURL(file);
-    onSealLoaded();
-  }
-  
- export function changeSize(e: Event) {
-    const target = e.target as HTMLSelectElement;
-    imageSize = parseInt(target.value, 10);
-    redrawCanvas();
-  }
+    img.src = event.target!.result as string;
+  };
+
+  reader.readAsDataURL(file);
+  onSealLoaded();
+}
+
+export function changeSize(e: Event) {
+  const target = e.target as HTMLSelectElement;
+  imageSize = parseInt(target.value, 10);
+  redrawCanvas();
+}
 
 export function clearSeal() {
   image = null;
