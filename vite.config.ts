@@ -12,7 +12,7 @@ export default defineConfig({
             theme_color: '#222222',
             icons: [
             {
-                src: '/favicon.png',
+                src: './favicon.png',
                 sizes: '512x512',
                 type: 'image/png'
             },

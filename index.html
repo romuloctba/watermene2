@@ -1,13 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Watermene2</title>
+
+      <!-- Primary Meta Tags -->
+    <title>WaterMene 2 - Adicionador de Marcas D'água em seu Mene versão 2</title>
+    <meta name="title" content="WaterMene 2 - Adicionador de Marcas D'água em seu Mene versão 2">
+    <meta name="description" content="Além de adicionar marca d'água grátis, vc pode enviar o seu próprio selo pra usar como marca d'água. Projeto de código aberto.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://romuloctba.github.io/watermene2/">
+    <meta property="og:title" content="WaterMene 2 - Adicionador de Marcas D'água em seu Mene versão 2">
+    <meta property="og:description" content="Além de adicionar marca d'água grátis, vc pode enviar o seu próprio selo pra usar como marca d'água. Projeto de código aberto.">
+    <meta property="og:image" content="">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://romuloctba.github.io/watermene2/">
+    <meta property="twitter:title" content="WaterMene 2 - Adicionador de Marcas D'água em seu Mene versão 2">
+    <meta property="twitter:description" content="Além de adicionar marca d'água grátis, vc pode enviar o seu próprio selo pra usar como marca d'água. Projeto de código aberto.">
+    <meta property="twitter:image" content="">
+
   </head>
   <body>
     <div id="app">
+      <div id="installButtonContainer" class="hidden">
+        <span>Baixar o Watermene</span>
+        <button id="installButton" aria-label="Sim, instalar este APP">
+          &nbsp;
+        </button>
+
+        <button id="dontInstallButton" aria-label="Não quero instalar">
+          &nbsp;
+        </button>
+      </div>
+      <div id="instructions-container"></div>
       <canvas id="menearea"></canvas>
     </div>
     <main id="main">
@@ -17,9 +47,6 @@
             Mover
           </button>
         </div>
-        <button id="installButton" style="display: none;">
-          Instalar este App
-        </button>
         <div id="reset-container" class="hidden">
           <button id="resetButton">Reset</button>
         </div>

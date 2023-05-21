@@ -1,5 +1,6 @@
 import { redrawCanvas, resizeCanvas } from "./canvas";
 import { howForm, resetContainer, toggleItemHidden, uploadBackgroundForm, xSlider, ySlider } from "./controls";
+import { hideInstructions } from "./instructions";
 
 let backgroundImage: HTMLImageElement | null = null;
 
@@ -19,6 +20,7 @@ export function drawBackground(ctx: CanvasRenderingContext2D) {
 }
 
 function onBackgroundUploaded() {
+  hideInstructions();
   toggleItemHidden(uploadBackgroundForm);
   toggleItemHidden(resetContainer);
   toggleItemHidden(howForm);

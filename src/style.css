@@ -242,3 +242,103 @@ input, select, label {
   margin-bottom: 4px;
 }
 
+#installButtonContainer button {
+  line-height: 1em;
+}
+
+#installButtonContainer button img {}
+
+#installButton {
+  background: url('/icons/bookmark-plus.svg') 50% 50% no-repeat;
+  background-color: rgba(50, 100, 10, 0.8);
+}
+#dontInstallButton {
+  background: url('/icons/close.svg') 50% 50% no-repeat;
+  background-color: rgba(250, 100, 10, 0.8);
+}
+
+#installButtonContainer:hover {
+  opacity: 1;
+}
+#installButtonContainer {
+  position: fixed;
+  top: -1.5em;
+  left: 50%;
+  z-index: 1;
+  color: #222;
+  background: rgba(255,255,255,1);
+  opacity: 0.4;
+  padding: 2em 1em 1em 1em;
+  border-radius: 16px;
+  transform: translateX(-50%);
+  transition: all 100ms ease-in-out;
+}
+#installButtonContainer button {
+  margin: 0 1.4em;
+}
+
+div#installButtonContainer span {
+  display: block;
+  font-size: 0.8em;
+  font-weight: bold;
+  opacity: 0.5;
+  padding-bottom: 1em;
+}
+
+#instructions-container ol {
+
+}
+
+#instructions-container ol li {
+  padding: 10px 24px 26px 24px;
+  max-width: 300px;
+  margin-top: 24px;
+  line-height: 1em;
+  text-align-last: left;
+  font-weight: 500;
+  position: relative;
+  background-color: #3DD1E7;
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: #000000;
+}
+#instructions-container ol li.warning {
+  font-size: 0.75em;
+}
+
+#instructions-container ol li.warning:before {
+  display: none;
+}
+
+#instructions-container ol li:after {
+  content: '';
+  position: absolute;
+  border: 4px solid #000000;
+  bottom: 2px;
+  left: 2px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  transform: rotate(-2deg);
+  transition: 150ms all ease-in-out;
+}
+
+#instructions-container ::marker {
+  font-weight: bold;
+  color: #3DD1E7;
+  font-size:2em;
+  z-index: 9;
+}
+
+#instructions-container li:before {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  background: black;
+  border: 4px solid #3DD1E7;
+  left: -50px;
+  top: 0em;
+  width: 3.5em;
+  height: 2em;
+  transform: rotate(6deg);
+  transition: 150ms all ease-in-out;
+}

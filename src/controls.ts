@@ -1,3 +1,5 @@
+import { showInstructions } from "./instructions";
+
 // Add other form-related functions as needed
 export const transparencySlider = document.querySelector<HTMLInputElement>('#transparency')!; 
 export const xSlider = document.querySelector<HTMLInputElement>('#position-x')!;
@@ -14,6 +16,11 @@ export const form = document.getElementById('the-form') as HTMLFormElement;
 export const uploadBackgroundForm = document.getElementById('upload-mene') as HTMLFormElement;
 export const resetContainer = document.getElementById('reset-container') as HTMLDivElement;
 export const downloadButton = document.getElementById('download') as HTMLButtonElement;
+export const dontInstallButton = document.getElementById('dontInstallButton') as HTMLButtonElement;
+export const installButton = document.getElementById('installButton') as HTMLButtonElement;
+export const installButtonContainer = document.getElementById('installButtonContainer') as HTMLDivElement;
+
+
 function resetAllFields() {
   form.reset();
   backgroundInput.value ='';
@@ -22,6 +29,7 @@ function resetAllFields() {
 
 export function resetForm() {
   resetAllFields();
+  showInstructions();
   makeVisible(uploadBackgroundForm);
   makeHidden(howForm);
   makeHidden(form);
