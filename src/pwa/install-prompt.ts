@@ -1,4 +1,5 @@
-import { dontInstallButton, installButton, installButtonContainer, makeHidden, makeVisible } from "../controls";
+import { dontInstallButton, installButton, installButtonContainer } from "../controls";
+import { makeHidden, makeVisible } from "../ui";
 type BeforeInstallPromptEvent = Event & Record<string, any>;
 
 let deferredPrompt: BeforeInstallPromptEvent | undefined;

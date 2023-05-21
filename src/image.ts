@@ -1,6 +1,7 @@
 import { redrawCanvas } from "./canvas";
 import { DEFAULT_IMAGE_WIDTH } from "./constants";
-import { form, howForm, makeHidden, makeVisible, transparencySlider, xSlider, ySlider } from "./controls";
+import { form, howForm, transparencySlider, xSlider, ySlider } from "./controls";
+import { makeHidden, makeVisible } from "./ui";
 
 let image: HTMLImageElement | null = null;
 let imageSize = DEFAULT_IMAGE_WIDTH; // Default size

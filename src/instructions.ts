@@ -1,4 +1,4 @@
-import { makeHidden, makeVisible } from "./controls";
+import { makeHidden, makeVisible } from "./ui";
 
 const instructionsContainer = document.getElementById('instructions-container') as HTMLDivElement;
 

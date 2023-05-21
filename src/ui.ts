@@ -1,3 +1,6 @@
+import { backgroundInput, form, howForm, imageInput, resetContainer, uploadBackgroundForm } from "./controls";
+import { showInstructions } from "./instructions";
+
 const mainElement = document.getElementById('main') as HTMLDivElement;
 const closeMain = document.getElementById('closeMain') as HTMLButtonElement;
 export type SEAL_FORM_OPTIONS = 'CHOOSE_SEAL' | 'SELF_SEAL';
@@ -30,4 +33,38 @@ export function changedHow (e: Event) {
     const target = e.target as HTMLSelectElement;
     toggleSealForm(target.value as SEAL_FORM_OPTIONS);
 }
-  
+
+
+function resetAllFields() {
+  form.reset();
+  backgroundInput.value ='';
+  imageInput.value = '';
+}
+
+export function resetForm() {
+  resetAllFields();
+  showInstructions();
+  makeVisible(uploadBackgroundForm);
+  makeHidden(howForm);
+  makeHidden(form);
+  makeHidden(resetContainer);
+}
+
+export function toggleItemHidden(item: HTMLElement) {
+  const isHidden = item.classList.contains('hidden');
+
+  if (!isHidden) {
+    makeHidden(item);
+    return;
+  }
+
+  makeVisible(item);
+}
+
+export function makeVisible(item: HTMLElement) {
+  item.classList.remove('hidden');
+}
+
+export function makeHidden(item: HTMLElement) {
+  item.classList.add('hidden');
+}

@@ -1,6 +1,7 @@
 import { redrawCanvas, resizeCanvas } from "./canvas";
-import { howForm, resetContainer, toggleItemHidden, uploadBackgroundForm, xSlider, ySlider } from "./controls";
+import { howForm, resetContainer, uploadBackgroundForm, xSlider, ySlider } from "./controls";
 import { hideInstructions } from "./instructions";
+import { toggleItemHidden } from "./ui";
 
 let backgroundImage: HTMLImageElement | null = null;
 
