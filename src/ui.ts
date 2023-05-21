@@ -1,4 +1,6 @@
+import { clearCanvas, resizeCanvas } from "./canvas";
 import { backgroundInput, form, howForm, imageInput, resetContainer, uploadBackgroundForm } from "./controls";
+import { clearSeal } from "./image";
 import { showInstructions } from "./instructions";
 
 const mainElement = document.getElementById('main') as HTMLDivElement;
@@ -67,4 +69,11 @@ export function makeVisible(item: HTMLElement) {
 
 export function makeHidden(item: HTMLElement) {
   item.classList.add('hidden');
+}
+
+export function resetAppState() {
+  resetForm();
+  clearSeal();
+  clearCanvas();
+  resizeCanvas(0, 0);
 }
