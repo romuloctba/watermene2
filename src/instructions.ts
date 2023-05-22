@@ -10,10 +10,13 @@ export function showInstructions() {
     </div>
     
     <ol>
-        <li>Envie o Mene no qual quer adicionar a selo.</li>
-        <li>Escolha entre os selos disponíveis ou <span class="news-badge">*</span>envie o seu próprio selo.</li>
+        <li>Envie o Mene para adicionar o selo.</li>
+        <li>Escolha entre os selos disponíveis<span class="news-badge">*</span> ou envie o seu próprio selo.</li>
         <li>Posicione, escolha o tamanho, e altere a transparência.</li>
-        <li>Faça download do seu Mene finalizado</li>
+        <li>Faça download do seu Mene finalizado<span class="news-badge">**</span></li>
+        <li class="warning">
+            *Em breve
+        </li>
         <li class="warning">
         **Atenção: Nem todos os watermenes são compliance com a regras do grupo. Contacte o SAC/Moderação em caso de dúvida.
         </li>

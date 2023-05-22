@@ -273,7 +273,7 @@ div#installButtonContainer span {
 }
 
 #instructions-container ol {
-
+  margin-top: 48px;
 }
 
 #instructions-container ol li {
@@ -355,6 +355,7 @@ div#installButtonContainer span {
   -moz-osx-font-smoothing: grayscale;
   padding-left: 2em;
   margin-left: 2em;
+  margin-top: -16px;
 }
 
 .wordart.superhero {
