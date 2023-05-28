@@ -16,3 +16,4 @@ export const downloadButton = document.getElementById('download') as HTMLButtonE
 export const installButton = document.getElementById('installButton') as HTMLButtonElement;
 export const installButtonContainer = document.getElementById('installButtonContainer') as HTMLDivElement;
 export const backToSealsButton = document.getElementById('backToSealsButton') as HTMLButtonElement;
+export const loadingMessage = document.getElementById('loadingMessage') as HTMLSpanElement;

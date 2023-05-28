@@ -1,4 +1,5 @@
 import { chosenSeal } from "./image";
+import { removeLoadingMessage, updateLoadingMessage } from "./ui";
 
 const DATA_ATTRIBUTE = 'data-counter';
 const container = document.getElementById("slider")!;
@@ -13,12 +14,12 @@ async function getSeals() {
   let stop = false;
 
   while (!stop) {
-    await fetch(`seals/seal_${counter}.png`).then(result => {
+    updateLoadingMessage(counter);
+    await fetch(`seals/seal_${counter}.png`, { method: 'HEAD' }).then(result => {
       if (result.status === 404) {
         stop = true;
         return;
       }
-      console.log('loaded seal ', counter);
       seals.push(`${counter}`);
       counter++;
     })
@@ -28,6 +29,7 @@ async function getSeals() {
 }
 
 getSeals().then(() => {
+  removeLoadingMessage();
   for (let i = 0; i < seals.length; i++) {
     console.log('creating el ', i);
     const sealControl = document.createElement("button");

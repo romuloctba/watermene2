@@ -1,5 +1,5 @@
 import { clearCanvas, resizeCanvas } from "./canvas";
-import { backgroundInput, form, howForm, imageInput, resetContainer, uploadBackgroundForm } from "./controls";
+import { backgroundInput, form, howForm, imageInput, loadingMessage, resetContainer, uploadBackgroundForm } from "./controls";
 import { clearSeal } from "./image";
 import { showInstructions } from "./instructions";
 
@@ -76,4 +76,12 @@ export function resetAppState() {
   clearSeal();
   clearCanvas();
   resizeCanvas(0, 0);
+}
+
+export function updateLoadingMessage(counter: number) {
+  loadingMessage.innerHTML = `<div class="loadingHeart"><div class="lds-heart"><div></div></div></div> Carregando Selos, aguarde... (#${counter}) `;
+}
+
+export function removeLoadingMessage() {
+  makeHidden(loadingMessage);
 }
