@@ -277,7 +277,7 @@ div#installButtonContainer span {
   max-width: 300px;
   margin-top: 24px;
   line-height: 1em;
-  text-align-last: left;
+  text-align: left;
   font-weight: 500;
   position: relative;
   background-color: #3DD1E7;
