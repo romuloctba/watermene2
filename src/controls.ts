@@ -1,8 +1,9 @@
 export const transparencySlider = document.querySelector<HTMLInputElement>('#transparency')!; 
+export const widthControl = document.querySelector<HTMLInputElement>('#width')!;
+export const currentSize = document.querySelector<HTMLInputElement>('#currentSize')!;
 export const xSlider = document.querySelector<HTMLInputElement>('#position-x')!;
 export const ySlider = document.querySelector<HTMLInputElement>('#position-y')!;
 export const resetButton = document.getElementById('resetButton') as HTMLButtonElement;
-export const sizeSelect = document.getElementById('sizeSelect') as HTMLSelectElement;
 export const closeMain = document.getElementById('closeMain') as HTMLButtonElement;
 export const how = document.getElementById('how')!;
 export const howForm = document.getElementById('how-form')!;

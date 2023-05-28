@@ -1,6 +1,6 @@
 import { redrawCanvas } from "./canvas";
 import { DEFAULT_IMAGE_WIDTH } from "./constants";
-import { form, howForm, transparencySlider, xSlider, ySlider } from "./controls";
+import { currentSize, form, howForm, transparencySlider, xSlider, ySlider } from "./controls";
 import { makeHidden, makeVisible } from "./ui";
 
 let image: HTMLImageElement | null = null;
@@ -71,6 +71,7 @@ export function chosenSeal(img: HTMLImageElement) {
 export function changeSize(e: Event) {
   const target = e.target as HTMLSelectElement;
   imageSize = parseInt(target.value, 10);
+  currentSize.innerHTML= `${imageSize}px;`;
   redrawCanvas();
 }
 

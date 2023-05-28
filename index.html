@@ -92,13 +92,10 @@
         </fieldset>
         <fieldset>
           <legend>Tamanho</legend>
-            <label for="sizeSelect">Largura:</label>
-            <select id="sizeSelect">
-              <option value="22">22px</option>
-              <option value="44">44px</option>
-              <option selected value="88">88px</option>
-              <option value="176">176px</option>
-            </select>
+          <div>
+            <label for="width">Tamanho: <span id="currentSize">96px</span></label>
+            <input id="width" value="96" type="range" min="0" max="800" />
+          </div>
         </fieldset>
         <fieldset>
           <legend>Posição</legend>
