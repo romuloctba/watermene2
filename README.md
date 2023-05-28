@@ -1,55 +1,73 @@
-# WaterMene V2
-
-(English Bellow)
-
-Oi pessoal, este é o WaterMene V2.
-Ao contrário do V1, que usava o Watermark.js, este foi desenvolvido do 0.
-
-Isso significa que agora temos "um engine personalizado especializado em Menes". Isso não quer dizer muita coisa, mas soa legal.
-
----
-
-## Sobre o Projeto
-
-Este projeto usa o bundler Vite, e o package-manager pnpm. 
-Se quiser rodar aí na sua máquina, precisa ter o NodeJs 18, e daí é só rodar os comandos:
-
-`$ npm i -g pnpm`
-
-`$ pnpm install`
-
-`$ pnpm dev`
-
-Dessa forma, poderá abrir a url que aparecerá no seu terminal, e caso altere o código, ao salvar, a tela será atualizada automagicamente.
-
-Para gerar uma versão publicável, rode `$ pnpm build`, que irá gerar uma pasta chamada `dist`, que pode ser subida para um servidor estático.
-
-
-> Aqui estou usano GitHub Pages, então se vc der um fork neste repositório, basta habilitar GH-PAGES, e subir alguma tag (criar release). Quando uma nova tag for criada o Github Actions realizará um deploy.
-
-
-
----
-
 # WaterMene V2 - English
 
-Hi guys, this is WaterMene V2.
-Unlike V1, which used Watermark.js, this one was developed from scratch.
+<p align="center">
+    <img src="./public/favicon.png" alt="WaterMene V2 Favicon" width="256" />
+    <br />
+    <img src="https://img.shields.io/badge/watermene-v2-green" alt="Watermene V2 Badge" />
+</p>
 
-This means that now we have "a custom engine specialized in Memes." It doesn't mean much, but it sounds cool.
+
+
+| Link   |Badge|
+| ------|----| 
+| https://romuloctba.github.io/watermene2|[![GitHub Pages](https://img.shields.io/github/deployments/romuloctba/watermene2/github-pages?label=GitHub%20Pages&logo=github)](https://romuloctba.github.io/watermene2) |
+
+
+
+## Welcome to WaterMene V2! 
+
+This version of WaterMene has been completely reimagined and rebuilt from the ground up, offering a custom engine specialized in Memes. 
+
+This sounds cool an doesn't mean much, but While the previous version, V1, relied on Watermark.js, we have developed a new solution to provide enhanced functionality and improved performance.
 
 ## About the Project
-This project uses the Vite bundler and the pnpm package manager.
-If you want to run it on your machine, you need to have NodeJs 18 installed, and then run the following commands:
+WaterMene V2 is built using the [Vite](https://vitejs.dev/) bundler and the [pnpm](https://pnpm.io/) package manager. 
 
-`$ npm i -g pnpm`
+To run the project on your local machine, ensure you have (Node.js 18)[https://nodejs.org/download/release/latest-v18.x/] installed. 
 
-`$ pnpm install`
+Follow the steps below to get started:
 
-`$ pnpm dev`
+### Prerequisites
+- Node.js 18
 
-This way, you can open the URL that appeared in your terminal, and if you make any changes to the code and save it, the screen will automatically refresh.
+### Installation
+1. Install pnpm globally by running the following command:
+   ```
+   $ npm i -g pnpm
+   ```
 
-To generate a publishable version, run `$ pnpm build`, which will generate a folder called dist that can be uploaded to a static server.
+2. Install project dependencies by running the following command:
+   ```
+   $ pnpm install
+   ```
 
-Here, I'm using GitHub Pages, so if you fork this repository, you just need to enable GH-PAGES and upload a tag (create a release). When a new tag is created, GH actions will deploy the app.
+### Development
+
+
+Start the development server by running the following command:
+
+```
+$ pnpm dev
+```
+
+This will launch the application and display a URL in your terminal. You can open this URL in your browser. Any changes you make to the code will automatically trigger a screen refresh.
+
+### Building for Production
+To generate a publishable version of the application, run the following command:
+```
+$ pnpm build
+```
+This command will generate a `dist` folder containing the optimized and bundled version of the application. You can then upload this folder to a static server for deployment.
+
+### Deployment with GitHub Pages
+If you fork this repository, you can easily deploy the application using GitHub Pages. Follow the steps below:
+
+1. Enable GitHub Pages for your forked repository.
+2. Create a release by uploading a tag.
+3. When a new tag is created, GitHub Actions will automatically deploy the application.
+
+
+## Contact
+If you have any questions or suggestions regarding this project, feel free to open an issue!
+
+Happy mene-making with WaterMene V2!
