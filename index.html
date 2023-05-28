@@ -24,8 +24,8 @@
     <meta property="twitter:description" content="Além de adicionar marca d'água grátis, vc pode enviar o seu próprio selo pra usar como marca d'água. Projeto de código aberto.">
     <meta property="twitter:image" content="">
 
-    <script type="module" crossorigin src="/watermene2/assets/index-c0552a97.js"></script>
-    <link rel="stylesheet" href="/watermene2/assets/index-e071f959.css">
+    <script type="module" crossorigin src="/watermene2/assets/index-4528578d.js"></script>
+    <link rel="stylesheet" href="/watermene2/assets/index-c5ed5e53.css">
   <link rel="manifest" href="/watermene2/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/watermene2/registerSW.js"></script></head>
   <body>
     <div id="app">
@@ -49,7 +49,7 @@
         </div>
       </div>
       <div id="upload-mene">
-        <label for="backgroundInput">Envie o Mene</label>
+        <label class="input-file-label" for="backgroundInput">Envie seu Mene</label>
         <input type="file" id="backgroundInput" accept="image/png, image/jpeg" />
       </div>
 
@@ -62,7 +62,7 @@
                 <select name="how" id="how">
                   <option disabled selected value></option>
                   <optgroup label="Escolha">
-                    <option disabled value="CHOOSE_SEAL">Escolher Selo (em breve)</option>
+                    <option value="CHOOSE_SEAL">Escolher Selo</option>
                     <option value="SELF_SEAL">Subir um arquivo png</option>
                   </optgroup>
                 </select>
@@ -71,26 +71,27 @@
         </div>
       
         <div id="SELF_SEAL" class="field-line hidden">
-          <label for="imageInput">Enviar
+          <label for="imageInput" class="input-file-label">Envie um Selo
             <input type="file" id="imageInput" accept="image/png" />
           </label>
         </div>
 
         <div id="CHOOSE_SEAL" class="field-line hidden">
           <label for="sealChooser">Escolha um Selo:</label>
-          <section class="carousel" aria-labelledby="carouselheading">
-            <ul>
-              <li class="slide">…</li>
-              <li class="slide">…</li>
-              <li class="slide">…</li>
-              …
-            </ul>
-          </section>
+
+          <div class="slider-wrapper">
+            <div id="slider" class="carousel" aria-labelledby="carouselheading">
+            </div>
+          </div>
 
         </div>
       </fieldset>
       
       <form id="the-form" class="hidden">
+        <fieldset>
+          <legend>Mudou de idéia?</legend>
+          <button id="backToSealsButton">Trocar Selo</button>
+        </fieldset>
         <fieldset>
           <legend>Tamanho</legend>
             <label for="sizeSelect">Largura:</label>
@@ -106,11 +107,11 @@
           <div class="position-controls">
             <div>
               <label for="position-x">Horizontal</label>
-              <input id="position-x" type="range" min="0" max="800" />
+              <input id="position-x" value="0" type="range" min="0" max="800" />
             </div>
             <div>
               <label for="position-y">Vertical</label>
-              <input id="position-y" type="range" min="0" max="800" />
+              <input id="position-y" value="0" type="range" min="0" max="800" />
             </div>
           </div>
           <div>
