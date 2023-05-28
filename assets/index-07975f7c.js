@@ -6,12 +6,12 @@
     
     <ol>
         <li>Envie o seu Mene</li>
-        <li>Escolha um selo, ou envie</li>
+        <li>Escolha, ou envie, um selo/marca d'água</li>
         <li>Posicione</li>
         <li>Faça download!<span class="news-badge">**</span></li>
 
         <li class="warning">
-        **Atenção: Nem todos os watermenes são compliance com a regras do grupo. Contacte o SAC/Moderação em caso de dúvida.
+        **Atenção: <br>Nem todos os watermenes são compliance com a regras do grupo. Contacte o SAC/Moderação em caso de dúvida.
         </li>
     </ol>
     
