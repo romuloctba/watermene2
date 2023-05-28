@@ -18,7 +18,7 @@
 
 This version of WaterMene has been completely reimagined and rebuilt from the ground up, offering a custom engine specialized in Menes. 
 
-This sounds cool an doesn't mean much, but While the previous version, V1, relied on Watermark.js, we have developed a new solution to provide enhanced functionality and improved performance.
+This sounds cool and doesn't mean much, but while the previous version, V1, relied on Watermark.js, this one does not.
 
 ## About the Project
 WaterMene V2 is built using the [Vite](https://vitejs.dev/) bundler and the [pnpm](https://pnpm.io/) package manager. 
