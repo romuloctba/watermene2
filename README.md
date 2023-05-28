@@ -16,7 +16,7 @@
 
 ## Welcome to WaterMene V2! 
 
-This version of WaterMene has been completely reimagined and rebuilt from the ground up, offering a custom engine specialized in Memes. 
+This version of WaterMene has been completely reimagined and rebuilt from the ground up, offering a custom engine specialized in Menes. 
 
 This sounds cool an doesn't mean much, but While the previous version, V1, relied on Watermark.js, we have developed a new solution to provide enhanced functionality and improved performance.
 
