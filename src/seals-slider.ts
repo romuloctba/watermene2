@@ -18,6 +18,7 @@ async function getSeals() {
     await fetch(`seals/seal_${counter}.png`, { method: 'HEAD' }).then(result => {
       if (result.status === 404) {
         stop = true;
+        removeLoadingMessage();
         return;
       }
       seals.push(`${counter}`);
@@ -29,7 +30,6 @@ async function getSeals() {
 }
 
 getSeals().then(() => {
-  removeLoadingMessage();
   for (let i = 0; i < seals.length; i++) {
     console.log('creating el ', i);
     const sealControl = document.createElement("button");
