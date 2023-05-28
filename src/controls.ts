@@ -15,3 +15,4 @@ export const resetContainer = document.getElementById('reset-container') as HTML
 export const downloadButton = document.getElementById('download') as HTMLButtonElement;
 export const installButton = document.getElementById('installButton') as HTMLButtonElement;
 export const installButtonContainer = document.getElementById('installButtonContainer') as HTMLDivElement;
+export const backToSealsButton = document.getElementById('backToSealsButton') as HTMLButtonElement;

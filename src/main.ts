@@ -3,3 +3,4 @@ import './constants';
 import './event-listeners';
 import './instructions';
 import './pwa/install-prompt'
+import './seals-slider';

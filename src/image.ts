@@ -38,6 +38,12 @@ function onSealLoaded() {
   makeVisible(form);
 }
 
+export function onBackToSeals(e: Event) {
+  e.preventDefault();
+  makeVisible(howForm);
+  makeHidden(form);
+}
+
 export function loadedSeal(e: Event) {
   const target = e.target as HTMLInputElement;
   const file = target.files![0];
@@ -54,6 +60,12 @@ export function loadedSeal(e: Event) {
 
   reader.readAsDataURL(file);
   onSealLoaded();
+}
+
+export function chosenSeal(img: HTMLImageElement) {
+    setImage(img);
+    redrawCanvas();
+    onSealLoaded();
 }
 
 export function changeSize(e: Event) {
