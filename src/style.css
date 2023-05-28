@@ -328,16 +328,17 @@ div#installButtonContainer span {
 
 .logo-ball {
   position: absolute;
-  width: 64px;
+  width: 84px;
   height: 64px;
-  left: -12px;
-  top: 24px;
+  left: -50px;
+  top: 25px;
   border: 4px solid #3DD1E7;
   box-shadow: inset 3px 3px 3px #222;
   border-radius: 100%;
   background-image: url('/favicon.png');
   background-size: 100% auto;
   z-index: -1;
+  background-position: -10%;
 }
 
 .wordart {
