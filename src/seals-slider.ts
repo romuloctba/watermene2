@@ -13,7 +13,7 @@ async function getSeals() {
   let stop = false;
 
   while (!stop) {
-    await fetch(`/seals/seal_${counter}.png`).then(result => {
+    await fetch(`./seals/seal_${counter}.png`).then(result => {
       if (result.status === 404) {
         stop = true;
         return;
@@ -47,7 +47,7 @@ getSeals().then(() => {
           if (element.isIntersecting) {
             const currentCounter = element.target.getAttribute(DATA_ATTRIBUTE);
             const img = document.createElement('img');
-            img.setAttribute('src', '/seals/seal_' + currentCounter + '.png');
+            img.setAttribute('src', './seals/seal_' + currentCounter + '.png');
             element.target.appendChild(img);
   
             observer.unobserve(element.target);
