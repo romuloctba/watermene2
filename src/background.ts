@@ -16,8 +16,18 @@ export function getBackgroundImage() {
 export function drawBackground(ctx: CanvasRenderingContext2D) {
   const backgroundImage = getBackgroundImage();
   if (backgroundImage) {
-    ctx.drawImage(backgroundImage, 0, 0);
+    const { width, height } = getAdjustedSize(backgroundImage);
+
+    ctx.drawImage(backgroundImage, 0, 0, width, height);
   }
+}
+
+export function getAdjustedSize(img: HTMLImageElement) {
+  const newWidth = 960;
+  const aspectRatio = img.width / img.height;
+  const newHeight = newWidth / aspectRatio;
+
+  return { width: newWidth, height: newHeight}
 }
 
 function onBackgroundUploaded() {
@@ -36,10 +46,13 @@ export function changeBackground(e: Event) {
     const img = new Image();
     img.onload = () => {
       setBackgroundImage(img);
-      xSlider.setAttribute('max', '' + img.width);
-      ySlider.setAttribute('max', '' + img.height);
 
-      resizeCanvas(img.width, img.height);
+      const { width, height } = getAdjustedSize(img);
+
+      xSlider.setAttribute('max', '' + width);
+      ySlider.setAttribute('max', '' + height);
+
+      resizeCanvas(width, height);
       redrawCanvas();
     };
     img.src = event.target!.result as string;
