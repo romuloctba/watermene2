@@ -1,1 +1,1 @@
-export const DEFAULT_IMAGE_WIDTH = 88;
+export const DEFAULT_IMAGE_WIDTH = 171;
