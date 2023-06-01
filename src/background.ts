@@ -22,8 +22,13 @@ export function drawBackground(ctx: CanvasRenderingContext2D) {
   }
 }
 
-export function getAdjustedSize(img: HTMLImageElement) {
+export function getAdjustedSize(img: HTMLImageElement): { width: number, height: number } {
   const newWidth = 960;
+
+  if (img.width <= newWidth) {
+    return { width: img.width, height: img.height }
+  }
+  
   const aspectRatio = img.width / img.height;
   const newHeight = newWidth / aspectRatio;
 
