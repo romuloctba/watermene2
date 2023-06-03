@@ -1,5 +1,4 @@
-import { settingsIcon } from "./controls";
-import { makeHidden, makeVisible, toggleItemHidden } from "./ui";
+import { makeHidden, toggleItemHidden } from "./ui";
 
 const settingsContainer = document.getElementById('settings-container') as HTMLDivElement;
 
@@ -41,7 +40,7 @@ export function hidesettings() {
     settingsContainer.innerHTML = "";
 }
 
-settingsIcon.addEventListener('click', () => {
-    console.log('showing settings');
-    showSettings()
-  } );
+// settingsIcon.addEventListener('click', () => {
+//     console.log('showing settings');
+//     showSettings()
+//   } );

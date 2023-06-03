@@ -530,7 +530,7 @@ label[for=how] {
 #settings-container {
   position: absolute;
   width: 300px;
-  max-with: 80vw;
+  max-width: 80vw;
   min-height: 200px;
   max-height: 60vh;
   overflow-y: auto;
