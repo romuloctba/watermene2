@@ -31,6 +31,18 @@ export function redrawCanvas() {
   });
 }
 
+export function getMeneFilename() {
+  const currentDate = new Date();
+  const day = String(currentDate.getDate()).padStart(2, '0');
+  const month = currentDate.toLocaleString('default', { month: 'long' });
+  const year = String(currentDate.getFullYear());
+  const hours = String(currentDate.getHours()).padStart(2, '0');
+  const minutes = String(currentDate.getMinutes()).padStart(2, '0');
+  const formattedDate = `${day}-${month}-${year}-${hours}-${minutes}`;
+
+  return `mene-${formattedDate}.png`;
+}
+
 export function downloadCanvas(this: HTMLAnchorElement) {
 
   const dataURL = canvas.toDataURL('image/png');
@@ -38,7 +50,7 @@ export function downloadCanvas(this: HTMLAnchorElement) {
   // Create a temporary link element
   const link = document.createElement('a');
   link.href = dataURL;
-  link.download = 'watermene.png';
+  link.download = getMeneFilename();
 
   // Trigger the download
   document.body.appendChild(link);

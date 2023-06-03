@@ -1,5 +1,5 @@
 import { clearCanvas, resizeCanvas } from "./canvas";
-import { backgroundInput, form, howForm, imageInput, loadingMessage, resetContainer, uploadBackgroundForm } from "./controls";
+import { backgroundInput, form, howForm, imageInput, loadingMessage, resetContainer, settingsIcon, uploadBackgroundForm } from "./controls";
 import { clearSeal } from "./image";
 import { showInstructions } from "./instructions";
 
