@@ -1,6 +1,7 @@
 :root {
   --main-color: #3DD1E7;
-  
+  --second-color: #FFFFFF;
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -297,6 +298,25 @@ div#installButtonContainer span {
 }
 
 #instructions-container ol li.warning:before {
+  display: none;
+}
+
+#instructions-container ol li.text {
+  color: var(--second-color);
+  font-size: 0.8em;
+  background-color: transparent;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#instructions-container ol li.text:before {
+  z-index: 0;
+  border: none;
+  transform: scale(1.2);
+  background-color: #222;
+}
+
+#instructions-container ol li.text::after {
   display: none;
 }
 
