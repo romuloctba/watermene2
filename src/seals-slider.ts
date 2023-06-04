@@ -34,6 +34,7 @@ getSeals().then(() => {
     console.log('creating el ', i);
     const sealControl = document.createElement("button");
     sealControl.setAttribute(DATA_ATTRIBUTE, seals[i]);
+    sealControl.setAttribute('aria-label', `Escolher o selo ${i + 1}`);
     sealControl.classList.add("slide");
     sealControl.addEventListener('click', function() {
       const chosenImg = this.getElementsByTagName('img')[0];
@@ -47,8 +48,9 @@ getSeals().then(() => {
       setTimeout(() => {
         elements.forEach((element) => {
           if (element.isIntersecting) {
-            const currentCounter = element.target.getAttribute(DATA_ATTRIBUTE);
+            const currentCounter = element.target.getAttribute(DATA_ATTRIBUTE)!;
             const img = document.createElement('img');
+            img.setAttribute('alt', `Selo ${currentCounter + 1}`)
             img.setAttribute('src', 'seals/seal_' + currentCounter + '.png');
             element.target.appendChild(img);
   

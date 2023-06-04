@@ -4,12 +4,12 @@ const instructionsContainer = document.getElementById('instructions-container') 
 
 export function showInstructions() {
     const instructionsParagraph = `
-    <div class="wordart superhero">
-        <div class="logo-ball"></div>
+    <div role="figure" alt="WaterMene V2" class="wordart superhero">
+        <div title="Avestruz" class="logo-ball"></div>
         <h1 class="text">WaterMene</h1>
     </div>
     
-    <ol>
+    <ol aria-label="Instruções">
         <li>Envie o seu Mene</li>
         <li>Escolha um selo, ou envie sua marca d'água</li>
         <li>Posicione e ajuste</li>
@@ -19,7 +19,7 @@ export function showInstructions() {
             As imagens serão ajustadas para um máximo de 960px de largura.
         </li>
         <li class="text">
-            <h3> Avisos </h3>
+            <h2> Avisos </h2>
             1. Suas imagens <strong>não são</strong> salvas pelos nossos servidores, somente pela rede social que você compartilhar (se compartilhar). <br />
             <br /><br />
             2. Atenção: Nem todos os watermenes são compliance com as regras do grupo. <br />Contacte o SAC/Moderação em caso de dúvida.
@@ -27,7 +27,7 @@ export function showInstructions() {
             3. Este é um projeto de código aberto, sem garantias.
         </li>
         <li class="text">
-            <h3>Ver Código Fonte</h3>
+            <h2>Ver Código Fonte</h2>
             <a href="https://github.com/romuloctba/watermene2" target="blank">
                 <img src="https://camo.githubusercontent.com/1204ee3ae24cd3d431669311f6d03d67ed69da03b2439f22ad4b6247021036d3/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f77617465726d656e652d76322d677265656e" alt="WaterMene V2" />
             </a>

@@ -37,11 +37,11 @@
   </script>
 
   <body>
-    <div id="app">
-      <div id="instructions-container"></div>
-      <canvas id="menearea"></canvas>
-    </div>
-    <main id="main">
+    <main id="app">
+      <section id="instructions-container"></section>
+      <canvas alt="Prévia do Resultado" role="figure" id="menearea"></canvas>
+    </main>
+    <nav id="main">
       <div id="main-container-controls">
         <div id="settings-wrapper">
           <button id="closeMain">
@@ -68,10 +68,10 @@
       <fieldset id="how-form" class="hidden">
         <legend>Escolha Watermene</legend>
         <div>
-            Como vai ser?
-            <div class="field-line">
-              <label for="how">
-                <select name="how" id="how">
+          <div class="field-line">
+            <label for="how">
+              Como vai ser?
+              <select name="how" id="how">
                   <option disabled selected value></option>
                   <optgroup label="Escolha">
                     <option value="CHOOSE_SEAL">Escolher Selo</option>
@@ -137,7 +137,7 @@
           </div>
         </fieldset>
       </form>
-    </main>
+    </nav>
    
     <script type="module" src="/src/main.ts"></script>
   </body>
