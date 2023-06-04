@@ -24,7 +24,7 @@
     <meta property="twitter:description" content="Além de adicionar marca d'água grátis, vc pode enviar o seu próprio selo pra usar como marca d'água. Projeto de código aberto.">
     <meta property="twitter:image" content="https://romuloctba.github.io/watermene2/favicon.png">
 
-    <script type="module" crossorigin src="/watermene2/assets/index-9e24dc4c.js"></script>
+    <script type="module" crossorigin src="/watermene2/assets/index-65589342.js"></script>
     <link rel="stylesheet" href="/watermene2/assets/index-50b83a3c.css">
   <link rel="manifest" href="/watermene2/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/watermene2/registerSW.js"></script></head>
 
@@ -39,11 +39,11 @@
   </script>
 
   <body>
-    <div id="app">
-      <div id="instructions-container"></div>
-      <canvas id="menearea"></canvas>
-    </div>
-    <main id="main">
+    <main id="app">
+      <section id="instructions-container"></section>
+      <canvas alt="Prévia do Resultado" role="figure" id="menearea"></canvas>
+    </main>
+    <nav id="main">
       <div id="main-container-controls">
         <div id="settings-wrapper">
           <button id="closeMain">
@@ -70,10 +70,10 @@
       <fieldset id="how-form" class="hidden">
         <legend>Escolha Watermene</legend>
         <div>
-            Como vai ser?
-            <div class="field-line">
-              <label for="how">
-                <select name="how" id="how">
+          <div class="field-line">
+            <label for="how">
+              Como vai ser?
+              <select name="how" id="how">
                   <option disabled selected value></option>
                   <optgroup label="Escolha">
                     <option value="CHOOSE_SEAL">Escolher Selo</option>
@@ -139,7 +139,7 @@
           </div>
         </fieldset>
       </form>
-    </main>
+    </nav>
    
     
   </body>
